@@ -1,0 +1,264 @@
+@import "vars"
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	height: 100%
+	margin: 0px
+	padding: 0px
+	position: relative
+	line-height: 1.65
+	font-family: Lato sans-serif
+	overflow-x: hidden
+	color: white
+  overflow-y: hidden
+
+
+.button a
+  display: inline-block
+  font: normal normal 300 2.3vw Lato
+  text-decoration: none  
+  color: $blue
+  background-color: transparent
+  border: 2px solid $blue
+  border-radius: 100px
+  padding: .3em 1.2em       
+  background-size: 200% 100%
+  background-image: linear-gradient(to right, transparent 50%, $blue 50%)
+  transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease
+  &:hover
+    color: $dark-grey
+    background-position: -100% 100%
+    text-decoration: none
+
+
+.vertical-menu 
+  height: 100vh
+  width: 4.392%
+  display: inline-block
+  position: fixed
+  background-color: $bg-menu
+  
+  .vertical-menu-logo
+    color: white
+    font-size: 30px
+    padding: 0px 15px
+    border-bottom: 1px solid #d6d7d9
+    height: 50px
+  
+  .vertical-menu-links
+    list-style-type: none
+    display: block
+    position: absolute
+    top: 20%
+    right: 0
+    
+    li a
+      font-size: 25px
+      display: block
+      color: $grey-icon
+      padding: 10px 15px
+      text-decoration: none
+      
+      &:hover
+        color: $blue
+        
+
+        
+  .social-links
+    list-style-type: none
+    display: block
+    position: absolute
+    bottom: 0%
+    right: 0
+    
+    li a
+      font-size: 15px
+      display: block
+      color: $grey-icon
+      padding: 5px 20px
+      text-decoration: none
+      &:hover
+        color: $blue
+        
+section#home
+  height: 98vh
+  color: white
+  
+  .home-description
+    padding-top: 16%
+    position: absolute
+    top: 0
+    left: 10%
+    width: 40%
+    h1
+      font-size: 3.4vw
+      overflow: hidden
+      margin-bottom: 5%
+    span
+      color: $blue
+      
+
+
+section#about
+  color: white
+  padding-top: 8%
+  .about-description
+    width: 100%
+    padding-top: 8%
+    h2
+      font-size: 4vw
+      color: $blue
+    h3
+      font-style: italic
+      font-size: 2vw
+  .photo-block
+    width: 60%
+    float: right
+    .clip-svg
+      width: 0
+      height: 0
+      
+    
+
+    
+  img 
+      max-width: 100%
+      height: auto
+      transition: all 0.8s ease-in-out
+
+      &:hover
+        -webkit-transform: rotateZ(360deg)
+        -ms-transform: rotateZ(360deg)
+        transform: rotateZ(360deg)
+      
+    
+
+  .polygon-clip-hexagon
+      -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+      -webkit-clip-path: url("#polygon-clip-hexagon")
+      clip-path: url("#polygon-clip-hexagon")
+      
+  
+section#skills
+  height: 100vh
+  padding-top: 8%
+  color: white
+  
+  .skills-description
+    padding-top: 20%
+    width: 100%
+    h2
+      font-size: 4vw
+      color: $blue
+    p
+      font-size: 1.2vw
+    
+    
+  .skills-animation
+    width: 100%
+    
+
+
+    
+
+                
+
+
+section#works
+  
+  padding-top: 8%
+  h2
+    font-size: 3.5vw
+    color: $blue
+  .row_works
+    margin-bottom: 30px
+  .work
+    width: 100%
+    height: 200px
+    border-radius: 10px
+    background: url(../img/hover.png) no-repeat center 
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    transition: all 0.8s ease-in-out
+    &:hover
+      cursor: pointer
+      background: $bg-work
+      .work-description
+        display: block
+      
+    .work-description
+      display: none
+      text-align: center
+      font-size: 1.5vw
+      color: white
+      a
+        font-size: 1.3vw
+
+
+     
+
+    
+
+section#exp
+    width: 95.6%
+    margin-left: 4.392%
+    display: flex
+    flex-direction: row
+    padding-top: 10%
+    
+
+    .exp
+        width: 25%
+        text-align: center
+        height: 440px
+        padding-top: 4%
+        background-color: white
+        box-shadow: 0 20px 60px 0 rgba(0,0,0,.15)
+        background-size: 201% 100%
+        background-image: linear-gradient(to right, transparent 50%, $blue 50%)
+        transition: background-position .8s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .8s ease 0s, background-color .8s ease
+        &:hover
+            background-position: -99% 100%
+            cursor: pointer
+            .exp-image img
+                -webkit-transform: scale(1.1)
+                -ms-transform: scale(1.1)
+                transform: scale(1.1)
+        .exp-image
+            border-radius: 100%
+            img
+                width: 66%
+                height:auto
+                border-radius: 160px
+                box-shadow: 0 15px 40px 1px rgba(0,0,0,.15)
+                -moz-transition: all 1s ease-out
+                -o-transition: all 1s ease-out
+                -webkit-transition: all 1s ease-out
+        .exp-title
+            text-align: left
+            padding-left: 8%
+            padding-top: 8%
+            p
+                color: $black
+                font-size: 1vw
+                text-transform: uppercase
+                font-weight: bold
+                margin: 0
+            span
+                font-size: 1.4vw
+                font-weight: 400
+                font-family: 'Lato', sans-serif
+
+footer
+  text-align: center
+  color: white
+  font-size: 1.5vw
+  padding-top: 2%
+  padding-bottom: 1%
+  i
+    color: $blue
